@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Cambo - Empowering Communities in Cambodia</title>
+    <!-- Google Fonts: Kantumruy Pro & Material Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><span class="material-icons logo-icon">eco</span> HopeCambo</a>
+        </div>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="material-icons">menu</span>
+        </button>
+
+        <nav class="nav">
+            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About Us</a>
+            <a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+            <a href="donate.html" class="donate-btn" data-i18n="nav_donate">Donate Now</a>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch to Khmer" title="ប្តូរទៅភាសាខ្មែរ (Switch to Khmer)">
+                <svg class="flag-icon" viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#032ea1"/><rect y="5" width="30" height="10" fill="#e00025"/><g fill="#ffffff"><rect x="7" y="11" width="16" height="3"/><rect x="9" y="10" width="12" height="1"/><polygon points="15,6 13,10 17,10"/><polygon points="10,8 9,10 11,10"/><polygon points="20,8 19,10 21,10"/></g></svg>
+                <span>ខ្មែរ</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <span class="tag" data-i18n="hero_tag">Non-Profit Organization</span>
+            <h1 data-i18n="hero_title">Empowering Communities, Changing Lives in Cambodia</h1>
+            <p data-i18n="hero_desc">We work directly on the ground in rural Cambodia to provide sustainable clean water wells, digital education, and food security for vulnerable families.</p>
+            <div class="hero-buttons">
+                <a href="donate.html" class="btn btn-green" data-i18n="hero_btn_donate">Make a Difference Today</a>
+                <a href="about.html" class="btn btn-outline" data-i18n="hero_btn_mission">Our Mission</a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats reveal">
+            <div class="container">
+                <div class="stat-box">
+                    <span class="material-icons stat-icon">people_alt</span>
+                    <div>
+                        <h2 data-i18n="stat_lives">120K+</h2>
+                        <p data-i18n="stat_lives_lbl">Lives Impacted</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="material-icons stat-icon">assignment_turned_in</span>
+                    <div>
+                        <h2 data-i18n="stat_projects">45+</h2>
+                        <p data-i18n="stat_projects_lbl">Active Projects</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="material-icons stat-icon">verified</span>
+                    <div>
+                        <h2 data-i18n="stat_rate">98%</h2>
+                        <p data-i18n="stat_rate_lbl">Direct Impact Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Active Campaigns -->
+        <section class="campaigns">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="campaigns_title">Active Campaigns in Cambodia</h2>
+                <p class="subtitle reveal" data-i18n="campaigns_sub">Explore our current initiatives that need your immediate support.</p>
+                
+                <div class="card-container">
+                    <!-- Campaign 1: Clean Water -->
+                    <div class="card reveal reveal-delay-1">
+                        <img src="https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&w=800&q=80" alt="Rural children gathering clean water at village water pump" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp1_cat">Water Project</span>
+                            <h3 data-i18n="camp1_title">Clean Water for Siem Reap Rural Schools</h3>
+                            <p data-i18n="camp1_desc">Installing solar-powered deep filtration wells and sanitary water stations across primary schools in rural Siem Reap province.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp1_raised"><strong>$37,500</strong> raised</span>
+                                <span data-i18n="camp1_goal">Goal: $50,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign 2: Education -->
+                    <div class="card reveal reveal-delay-2">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Children in rural classroom" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp2_cat">Education</span>
+                            <h3 data-i18n="camp2_title">Digital Classrooms for Battambang Youth</h3>
+                            <p data-i18n="camp2_desc">Equipping remote village schools with solar tablets, educational software, and Khmer-language literacy training.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 45%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp2_raised"><strong>$13,500</strong> raised</span>
+                                <span data-i18n="camp2_goal">Goal: $30,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign 3: Nutrition -->
+                    <div class="card reveal reveal-delay-3">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Food kit distribution to community" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp3_cat">Nutrition & Agriculture</span>
+                            <h3 data-i18n="camp3_title">Emergency Food & Seed Kits for Kampong Speu</h3>
+                            <p data-i18n="camp3_desc">Distributing drought-resilient seed packets, farming tools, and emergency rice rations to vulnerable farming families.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp3_raised"><strong>$45,000</strong> raised</span>
+                                <span data-i18n="camp3_goal">Goal: $50,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign 4: Healthcare & Solar -->
+                    <div class="card reveal reveal-delay-1">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" alt="Solar powered rural clinic in Cambodia" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp4_cat">Healthcare & Solar</span>
+                            <h3 data-i18n="camp4_title">Solar Power for Rural Health Clinics</h3>
+                            <p data-i18n="camp4_desc">Supplying reliable solar electricity for vaccine refrigeration, newborn incubators, and nighttime emergency care.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 81%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp4_raised"><strong>$28,400</strong> raised</span>
+                                <span data-i18n="camp4_goal">Goal: $35,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign 5: Women Empowerment -->
+                    <div class="card reveal reveal-delay-2">
+                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Rural artisan women cooperative" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp5_cat">Women Empowerment</span>
+                            <h3 data-i18n="camp5_title">Clean Water Artisan & Weaving Micro-Grants</h3>
+                            <p data-i18n="camp5_desc">Providing micro-capital, clean water sanitizers, and sustainable loom equipment to rural women cooperative weavers.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 72%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp5_raised"><strong>$18,200</strong> raised</span>
+                                <span data-i18n="camp5_goal">Goal: $25,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign 6: Youth Sanitation -->
+                    <div class="card reveal reveal-delay-3">
+                        <img src="https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&w=800&q=80" alt="Hygiene and handwashing station at rural school" loading="lazy">
+                        <div class="card-body">
+                            <span class="category" data-i18n="camp6_cat">Youth Sanitation</span>
+                            <h3 data-i18n="camp6_title">Eco-Friendly School Sanitation Blocks</h3>
+                            <p data-i18n="camp6_desc">Constructing modern, hygienic washrooms and handwashing stations across 12 primary schools in Kampong Cham.</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 71%;"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span data-i18n="camp6_raised"><strong>$21,500</strong> raised</span>
+                                <span data-i18n="camp6_goal">Goal: $30,000</span>
+                            </div>
+                            <a href="donate.html" class="card-btn" data-i18n="support_btn">Support Campaign</a>
+                            <div class="card-share-row">
+                                <span data-i18n="share_campaign">Share:</span>
+                                <div class="share-links">
+                                    <button class="share-btn" data-network="facebook" title="Share on Facebook">FB</button>
+                                    <button class="share-btn" data-network="telegram" title="Share on Telegram">Telegram</button>
+                                    <button class="share-btn" data-network="linkedin" title="Share on LinkedIn">LinkedIn</button>
+                                    <button class="share-btn" data-network="copy" title="Copy Link">🔗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="testimonials_title">Voices from the Community</h2>
+                <p class="subtitle reveal" data-i18n="testimonials_sub">Real stories from the people our programs have directly impacted across rural Cambodia.</p>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <span class="material-icons testimonial-quote-icon">format_quote</span>
+                        <p class="testimonial-text" data-i18n="testimonial1_text">Before HopeCambo installed our school well, our children had to walk 3 kilometers to fetch murky canal water. Now they drink safely and stay in class.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><span class="material-icons">person</span></div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonial1_name">Sokha Meas</h4>
+                                <p data-i18n="testimonial1_role">Community Leader, Siem Reap</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal reveal-delay-2">
+                        <span class="material-icons testimonial-quote-icon">format_quote</span>
+                        <p class="testimonial-text" data-i18n="testimonial2_text">The solar tablets brought a modern world into our remote classroom. Seeing our students learn Khmer literature and math interactively has been priceless.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><span class="material-icons">person</span></div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonial2_name">Vanna Sok</h4>
+                                <p data-i18n="testimonial2_role">Primary School Teacher, Battambang</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal reveal-delay-3">
+                        <span class="material-icons testimonial-quote-icon">format_quote</span>
+                        <p class="testimonial-text" data-i18n="testimonial3_text">The drought-resilient seed packets allowed our village to withstand severe heatwaves and feed over 60 families through the dry season.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><span class="material-icons">person</span></div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonial3_name">Rith Chea</h4>
+                                <p data-i18n="testimonial3_role">Farmer Representative, Kampong Speu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery & Field Impact Stories -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="gallery_title">Field Impact & Photo Gallery</h2>
+                <p class="subtitle reveal" data-i18n="gallery_sub">Visual stories from our ongoing community development work across Cambodia.</p>
+
+                <!-- Filter Buttons -->
+                <div class="gallery-filters reveal">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Projects</button>
+                    <button class="filter-btn" data-filter="water" data-i18n="filter_water">Clean Water</button>
+                    <button class="filter-btn" data-filter="edu" data-i18n="filter_edu">Education</button>
+                    <button class="filter-btn" data-filter="comm" data-i18n="filter_comm">Community</button>
+                    <button class="filter-btn" data-filter="health" data-i18n="filter_health">Healthcare</button>
+                    <button class="filter-btn" data-filter="women" data-i18n="filter_women">Women & Youth</button>
+                </div>
+
+                <!-- Gallery Items -->
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal reveal-delay-1" data-category="water" data-title="Siem Reap Water Well" data-desc="Clean solar water station serving 400 school students.">
+                        <img src="https://images.unsplash.com/photo-1747330665949-d35f7c3ca6ad?auto=format&fit=crop&w=800&q=80" alt="Students washing hands and drinking clean water" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal1_title">Siem Reap Water Well</h4>
+                            <p data-i18n="gal1_desc">Clean solar water station serving 400 school students.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-2" data-category="edu" data-title="Battambang Digital Class" data-desc="Primary students using interactive learning tablets.">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Battambang Digital Class" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal2_title">Battambang Digital Class</h4>
+                            <p data-i18n="gal2_desc">Primary students using interactive learning tablets.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-3" data-category="comm" data-title="Tonle Sap Outreach" data-desc="Health and clean water deliveries to floating villages.">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Tonle Sap Outreach" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal3_title">Tonle Sap Outreach</h4>
+                            <p data-i18n="gal3_desc">Health and clean water deliveries to floating villages.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-1" data-category="comm" data-title="Kampong Speu Agriculture" data-desc="Distributing organic seeds and drought assistance.">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Kampong Speu Agriculture" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal4_title">Kampong Speu Agriculture</h4>
+                            <p data-i18n="gal4_desc">Distributing organic seeds and drought assistance.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-2" data-category="water" data-title="Volunteer Well Drilling" data-desc="Local community leaders testing freshwater purity.">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=80" alt="Volunteer Well Drilling" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal5_title">Volunteer Well Drilling</h4>
+                            <p data-i18n="gal5_desc">Local community leaders testing freshwater purity.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-3" data-category="water" data-title="Clean Drinking Purity" data-desc="Safe potable water accessible to every village child.">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Clean Drinking Purity" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal6_title">Clean Drinking Purity</h4>
+                            <p data-i18n="gal6_desc">Safe potable water accessible to every village child.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-1" data-category="health" data-title="Solar Clinic Installation" data-desc="Powering life-saving medical equipment and vaccines.">
+                        <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=800&q=80" alt="Solar Clinic Installation in rural Cambodia" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal7_title">Solar Clinic Installation</h4>
+                            <p data-i18n="gal7_desc">Powering life-saving medical equipment and vaccines.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-2" data-category="women" data-title="Women Artisan Cooperative" data-desc="Empowering rural mothers through sustainable craft training.">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Women Artisan Cooperative in rural village" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal8_title">Women Artisan Cooperative</h4>
+                            <p data-i18n="gal8_desc">Empowering rural mothers through sustainable craft training.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal reveal-delay-3" data-category="comm" data-title="Kampong Cham Sanitation Block" data-desc="Hygienic school washrooms promoting youth health.">
+                        <img src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&w=800&q=80" alt="Kampong Cham Sanitation Block" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4 data-i18n="gal9_title">Kampong Cham Sanitation Block</h4>
+                            <p data-i18n="gal9_desc">Hygienic school washrooms promoting youth health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal for Photo Preview -->
+        <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
+                <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous Photo">&#10094;</button>
+                <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next Photo">&#10095;</button>
+                <div class="lightbox-img-wrap">
+                    <img id="lightboxImg" src="" alt="Enlarged photo">
+                </div>
+                <div class="lightbox-caption">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+                        <h3 id="lightboxTitle"></h3>
+                        <span id="lightboxCounter" class="lightbox-counter">1 / 6</span>
+                    </div>
+                    <p id="lightboxDesc" style="color: var(--c-muted); margin-top: 4px;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Milestone Timeline Section -->
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="timeline_title">Project Milestone & Execution Timeline</h2>
+                <p class="subtitle reveal" data-i18n="timeline_sub">How every HopeCambo initiative moves transparently from local assessment to sustained impact.</p>
+
+                <div class="timeline-grid">
+                    <div class="timeline-card active reveal reveal-delay-1">
+                        <span class="timeline-step-badge" data-i18n="step1_badge">Step 01</span>
+                        <h3 data-i18n="step1_title">Community Need & Hydro Survey</h3>
+                        <p data-i18n="step1_desc">Collaborating with local commune councils, testing groundwater tables, and ensuring priority for marginalized families.</p>
+                    </div>
+
+                    <div class="timeline-card active reveal reveal-delay-2">
+                        <span class="timeline-step-badge" data-i18n="step2_badge">Step 02</span>
+                        <h3 data-i18n="step2_title">Solar Infrastructure & Drilling</h3>
+                        <p data-i18n="step2_desc">Procuring durable local parts, drilling deep potable wells, and installing renewable solar-powered filtration stations.</p>
+                    </div>
+
+                    <div class="timeline-card active reveal reveal-delay-3">
+                        <span class="timeline-step-badge" data-i18n="step3_badge">Step 03</span>
+                        <h3 data-i18n="step3_title">Committee Training & Tech Setup</h3>
+                        <p data-i18n="step3_desc">Equipping village teachers with tablets, training local technicians for repairs, and ensuring water safety monitoring.</p>
+                    </div>
+
+                    <div class="timeline-card reveal reveal-delay-4">
+                        <span class="timeline-step-badge" data-i18n="step4_badge">Step 04</span>
+                        <h3 data-i18n="step4_title">Independent Audit & Sustainment</h3>
+                        <p data-i18n="step4_desc">Quarterly water quality tests, open financial disclosures to donors, and full community maintenance ownership.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="faq_title">Frequently Asked Questions</h2>
+                <p class="subtitle reveal" data-i18n="faq_sub">Everything you need to know about supporting HopeCambo and our operations.</p>
+
+                <div class="faq-container">
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq_q1">How is my donation allocated and tracked?</span>
+                            <span class="material-icons">expand_more</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner" data-i18n="faq_a1">
+                                85% goes directly into tangible field infrastructure (drilling, solar pumps, classroom tablets, food kits). 10% covers technical water testing and safety audits, and 5% handles accounting and admin.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal reveal-delay-1">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq_q2">Can I donate directly in Cambodian Riel or via KHQR?</span>
+                            <span class="material-icons">expand_more</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner" data-i18n="faq_a2">
+                                Yes! Our donation portal generates dynamic KHQR codes compatible with Bakong, ABA Mobile, Wing, ACLEDA, and all major Cambodian financial apps.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal reveal-delay-2">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq_q3">Can international volunteers participate remotely?</span>
+                            <span class="material-icons">expand_more</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner" data-i18n="faq_a3">
+                                Absolutely. We welcome remote volunteers for curriculum building, graphic design, social media reporting, translation, and tech mentorship.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal reveal-delay-3">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq_q4">How can corporate partners or NGOs collaborate with HopeCambo?</span>
+                            <span class="material-icons">expand_more</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner" data-i18n="faq_a4">
+                                We actively collaborate with commune councils, international NGOs, and private donors. You can reach out through our Contact page or directly via Telegram.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Partners & Community Endorsements -->
+        <section class="partners-section">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="partners_title">Trusted Partners & Community Endorsements</h2>
+                <p class="subtitle reveal" data-i18n="partners_sub">Proudly cooperating with community councils, educational departments, and development leaders in Cambodia.</p>
+
+                <div class="partners-grid">
+                    <div class="partner-card reveal reveal-delay-1">
+                        <div class="partner-icon-circle">
+                            <span class="material-icons">water_drop</span>
+                        </div>
+                        <h4>Clean Water Cambodia</h4>
+                        <p data-i18n="partner1_desc">Rural School Sanitation Partner</p>
+                    </div>
+
+                    <div class="partner-card reveal reveal-delay-2">
+                        <div class="partner-icon-circle">
+                            <span class="material-icons">account_balance</span>
+                        </div>
+                        <h4>Commune Councils</h4>
+                        <p data-i18n="partner2_desc">Commune Council Representative</p>
+                    </div>
+
+                    <div class="partner-card reveal reveal-delay-3">
+                        <div class="partner-icon-circle">
+                            <span class="material-icons">solar_power</span>
+                        </div>
+                        <h4>SolarTech Eco</h4>
+                        <p data-i18n="partner3_desc">Solar Water Engineering Partner</p>
+                    </div>
+
+                    <div class="partner-card reveal reveal-delay-4">
+                        <div class="partner-icon-circle">
+                            <span class="material-icons">school</span>
+                        </div>
+                        <h4>Khmer Rural Literacy</h4>
+                        <p data-i18n="partner4_desc">Literacy & Digital Skills Partner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Donors Section -->
+        <section class="top-donors">
+            <div class="container">
+                <h2 class="title reveal" data-i18n="donors_title">Our Top Supporters</h2>
+                <p class="subtitle reveal" data-i18n="donors_sub">Recognizing those who have made extraordinary contributions to our mission.</p>
+
+                <div class="donors-grid">
+                    <div class="donor-card reveal reveal-delay-1">
+                        <div class="donor-rank">#1</div>
+                        <div class="donor-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>Sovannara Chea</h3>
+                        <p class="donor-amount">$12,500</p>
+                        <p class="donor-label" data-i18n="donor_top">Top Supporter</p>
+                    </div>
+                    <div class="donor-card reveal reveal-delay-2">
+                        <div class="donor-rank">#2</div>
+                        <div class="donor-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>Maria Santos</h3>
+                        <p class="donor-amount">$8,200</p>
+                        <p class="donor-label" data-i18n="donor_key">Key Benefactor</p>
+                    </div>
+                    <div class="donor-card reveal reveal-delay-3">
+                        <div class="donor-rank">#3</div>
+                        <div class="donor-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>James Mitchell</h3>
+                        <p class="donor-amount">$5,750</p>
+                        <p class="donor-label" data-i18n="donor_patron">Community Patron</p>
+                    </div>
+                    <div class="donor-card reveal reveal-delay-4">
+                        <div class="donor-rank">#4</div>
+                        <div class="donor-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>Lina Keo</h3>
+                        <p class="donor-amount">$4,100</p>
+                        <p class="donor-label" data-i18n="donor_advocate">Advocate</p>
+                    </div>
+                    <div class="donor-card reveal reveal-delay-4">
+                        <div class="donor-rank">#5</div>
+                        <div class="donor-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <h3>Robert Chen</h3>
+                        <p class="donor-amount">$3,500</p>
+                        <p class="donor-label" data-i18n="donor_advocate">Advocate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section with Newsletter -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3><span class="material-icons footer-logo-icon">eco</span> HopeCambo</h3>
+                <p data-i18n="footer_desc">Building resilient communities in Cambodia through transparent and impactful development programs.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_contact_title">Contact Info</h4>
+                <p data-i18n="footer_email">Email: contact@hopecambo.org</p>
+                <p data-i18n="footer_phone">Phone: +855 (0) 23 987 654</p>
+                <p data-i18n="footer_address">Phnom Penh & Siem Reap, Cambodia</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_news_title">Newsletter</h4>
+                <p data-i18n="footer_news_sub">Get monthly field reports and transparent impact stories.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email" data-i18n-ph="footer_news_ph" required>
+                        <button type="submit" class="newsletter-btn" data-i18n="footer_news_btn">Subscribe</button>
+                    </div>
+                    <div class="newsletter-feedback" id="newsletterFeedback"></div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 HopeCambo Non-Profit Organization. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Translations & Interactivity Script -->
+    <script src="translations.js"></script>
+    <script>
+        // Gallery Category Filtering & Lightbox
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+        function getVisibleGalleryItems() {
+            return galleryItems.filter(item => !item.classList.contains('is-hidden'));
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const match = (filter === 'all' || item.getAttribute('data-category') === filter);
+                    if (match) {
+                        item.classList.remove('is-hidden');
+                    } else {
+                        item.classList.add('is-hidden');
+                    }
+                });
+            });
+        });
+
+        // Enhanced Gallery Lightbox Modal
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDesc = document.getElementById('lightboxDesc');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+
+        let currentPhotoIdx = 0;
+
+        function updateLightboxView(idx) {
+            const visible = getVisibleGalleryItems();
+            if (visible.length === 0) return;
+            if (idx < 0) idx = visible.length - 1;
+            if (idx >= visible.length) idx = 0;
+            currentPhotoIdx = idx;
+
+            const currentItem = visible[currentPhotoIdx];
+            const img = currentItem.querySelector('img');
+            const title = currentItem.querySelector('h4').textContent;
+            const desc = currentItem.querySelector('p').textContent;
+
+            lightboxImg.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImg.src = img.src;
+                lightboxTitle.textContent = title;
+                lightboxDesc.textContent = desc;
+                if (lightboxCounter) {
+                    lightboxCounter.textContent = `${currentPhotoIdx + 1} / ${visible.length}`;
+                }
+                lightboxImg.style.opacity = '1';
+            }, 120);
+        }
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const visible = getVisibleGalleryItems();
+                const idx = visible.indexOf(item);
+                updateLightboxView(idx >= 0 ? idx : 0);
+                lightboxModal.classList.add('active');
+                lightboxModal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        function closeLightbox() {
+            if (lightboxModal) {
+                lightboxModal.classList.remove('active');
+                lightboxModal.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        if (lightboxClose && lightboxModal) {
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) closeLightbox();
+            });
+        }
+
+        if (lightboxPrev) {
+            lightboxPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                updateLightboxView(currentPhotoIdx - 1);
+            });
+        }
+
+        if (lightboxNext) {
+            lightboxNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                updateLightboxView(currentPhotoIdx + 1);
+            });
+        }
+
+        // Keyboard navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal || !lightboxModal.classList.contains('active')) return;
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                updateLightboxView(currentPhotoIdx - 1);
+            } else if (e.key === 'ArrowRight') {
+                updateLightboxView(currentPhotoIdx + 1);
+            }
+        });
+
+        // Accessible Accordion FAQ interaction
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const wasActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        const b = i.querySelector('.faq-question');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    });
+
+                    if (!wasActive) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

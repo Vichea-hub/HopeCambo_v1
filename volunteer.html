@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Hope Cambo</title>
+    <!-- Google Fonts: Kantumruy Pro & Material Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="volunteer.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><span class="material-icons logo-icon">eco</span> HopeCambo</a>
+        </div>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="material-icons">menu</span>
+        </button>
+
+        <nav class="nav">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About Us</a>
+            <a href="volunteer.html" class="active" data-i18n="nav_volunteer">Volunteer</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+            <a href="donate.html" class="donate-btn" data-i18n="nav_donate">Donate Now</a>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch to Khmer" title="ប្តូរទៅភាសាខ្មែរ (Switch to Khmer)">
+                <svg class="flag-icon" viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#032ea1"/><rect y="5" width="30" height="10" fill="#e00025"/><g fill="#ffffff"><rect x="7" y="11" width="16" height="3"/><rect x="9" y="10" width="12" height="1"/><polygon points="15,6 13,10 17,10"/><polygon points="10,8 9,10 11,10"/><polygon points="20,8 19,10 21,10"/></g></svg>
+                <span>ខ្មែរ</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Title -->
+        <section class="page-title reveal">
+            <h1 data-i18n="vol_banner_title">Join Our Mission</h1>
+            <p data-i18n="vol_banner_sub">Lend your time, passion, and skills to empower communities across Cambodia.</p>
+        </section>
+
+        <!-- Volunteer Content Section -->
+        <section class="volunteer-section">
+            <div class="container">
+
+                <!-- Interactive Role Filter Bar -->
+                <div class="volunteer-filter-bar reveal">
+                    <span class="filter-label" data-i18n="vol_filter_label">Filter Roles by Focus:</span>
+                    <div class="role-filter-chips">
+                        <button type="button" class="role-chip active" data-filter="all" data-i18n="vol_filter_all">All Roles (4)</button>
+                        <button type="button" class="role-chip" data-filter="water" data-i18n="vol_filter_water">Clean Water</button>
+                        <button type="button" class="role-chip" data-filter="edu" data-i18n="vol_filter_edu">Education & Tech</button>
+                        <button type="button" class="role-chip" data-filter="media" data-i18n="vol_filter_media">Media & Reporting</button>
+                        <button type="button" class="role-chip" data-filter="aid" data-i18n="vol_filter_aid">Relief & Logistics</button>
+                    </div>
+                </div>
+
+                <div class="volunteer-grid">
+                    <!-- Volunteer Application Form -->
+                    <div class="volunteer-form-box reveal">
+                        <h3 data-i18n="vol_form_title">Volunteer Application</h3>
+                        <form id="volunteerForm">
+                            <div class="form-group">
+                                <label for="volName" data-i18n="vol_name_lbl">Full Name</label>
+                                <input type="text" id="volName" placeholder="Chan Vathanaka" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volEmail" data-i18n="vol_email_lbl">Email Address</label>
+                                <input type="email" id="volEmail" placeholder="vathanaka@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volPhone" data-i18n="vol_phone_lbl">Phone / Telegram Handle</label>
+                                <input type="text" id="volPhone" placeholder="+855 12 345 678 or @username" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volLocation" data-i18n="vol_loc_lbl">Current Location</label>
+                                <select id="volLocation">
+                                    <option value="phnom_penh" data-i18n="vol_loc_opt1">Phnom Penh, Cambodia</option>
+                                    <option value="siem_reap" data-i18n="vol_loc_opt2">Siem Reap, Cambodia</option>
+                                    <option value="battambang" data-i18n="vol_loc_opt3">Battambang, Cambodia</option>
+                                    <option value="other_cambodia" data-i18n="vol_loc_opt4">Other Province in Cambodia</option>
+                                    <option value="international" data-i18n="vol_loc_opt5">International / Remote</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volRole" data-i18n="vol_role_lbl">Area of Interest</label>
+                                <select id="volRole">
+                                    <option value="water" data-i18n="vol_role_opt1">Water Station Maintenance & Field Work</option>
+                                    <option value="edu" data-i18n="vol_role_opt2">Digital Literacy & English Teaching</option>
+                                    <option value="media" data-i18n="vol_role_opt3">Photography, Media & Field Reporting</option>
+                                    <option value="aid" data-i18n="vol_role_opt4">Logistics & Emergency Aid Distribution</option>
+                                </select>
+                            </div>
+
+                            <!-- Interactive Shift & Schedule Picker -->
+                            <div class="form-group">
+                                <label data-i18n="vol_shift_days_lbl">Preferred Days</label>
+                                <div class="shift-chips-group" id="shiftDaysGroup">
+                                    <button type="button" class="shift-chip active" data-shift-day="weekdays" data-i18n="vol_shift_weekdays">Weekdays (Mon-Fri)</button>
+                                    <button type="button" class="shift-chip" data-shift-day="weekends" data-i18n="vol_shift_weekends">Weekends (Sat-Sun)</button>
+                                    <button type="button" class="shift-chip" data-shift-day="flexible" data-i18n="vol_shift_flexible">Flexible Days</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label data-i18n="vol_shift_time_lbl">Preferred Time of Day</label>
+                                <div class="shift-chips-group" id="shiftTimeGroup">
+                                    <button type="button" class="shift-chip active" data-shift-time="morning" data-i18n="vol_shift_morning">Morning (8 AM - 12 PM)</button>
+                                    <button type="button" class="shift-chip" data-shift-time="afternoon" data-i18n="vol_shift_afternoon">Afternoon (1 PM - 5 PM)</button>
+                                    <button type="button" class="shift-chip" data-shift-time="allday" data-i18n="vol_shift_allday">Flexible Hours</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volStartDate" data-i18n="vol_start_date_lbl">Earliest Start Date</label>
+                                <input type="date" id="volStartDate">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="volMsg" data-i18n="vol_msg_lbl">Why do you want to join HopeCambo?</label>
+                                <textarea id="volMsg" placeholder="Tell us briefly about your background and what inspires you to help..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" data-i18n="vol_submit_btn">Submit Application</button>
+                        </form>
+                    </div>
+
+                    <!-- Volunteer Highlights Sidebar -->
+                    <div class="volunteer-info reveal reveal-delay-1">
+                        <div class="volunteer-photo">
+                            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80" alt="HopeCambo Volunteers in Action" loading="lazy">
+                        </div>
+
+                        <!-- Live Certificate Promo Card -->
+                        <div class="info-card cert-promo-card">
+                            <div class="cert-promo-header">
+                                <span class="material-icons cert-badge-icon">workspace_premium</span>
+                                <div>
+                                    <h4 style="margin-bottom: 2px;" data-i18n="cert_promo_title">Official Volunteer Certificate</h4>
+                                    <p style="font-size: 12px; margin-bottom: 0;" data-i18n="cert_promo_sub">Earn an official verified Certificate of Community Service signed by HopeCambo directors.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="cert-preview-btn" id="openCertBtn">
+                                <span class="material-icons" style="font-size: 16px;">visibility</span>
+                                <span data-i18n="cert_btn_preview">Preview Certificate (Live)</span>
+                            </button>
+                        </div>
+
+                        <div class="info-card volunteer-role-card" data-category="water" data-role="water" title="Click to pre-select this role in form">
+                            <h4><span class="material-icons">water_drop</span> Water Station Maintenance</h4>
+                            <p>Work directly beside village communities in Siem Reap to inspect filtration pumps and train local water committees.</p>
+                            <span class="role-select-badge"><span class="material-icons" style="font-size:14px;">touch_app</span> Select This Role</span>
+                        </div>
+
+                        <div class="info-card volunteer-role-card" data-category="edu" data-role="edu" title="Click to pre-select this role in form">
+                            <h4><span class="material-icons">school</span> Digital Literacy & Teaching</h4>
+                            <p>Teach digital basics, solar tablets, and bilingual reading to remote primary school youth in Battambang.</p>
+                            <span class="role-select-badge"><span class="material-icons" style="font-size:14px;">touch_app</span> Select This Role</span>
+                        </div>
+
+                        <div class="info-card volunteer-role-card" data-category="media" data-role="media" title="Click to pre-select this role in form">
+                            <h4><span class="material-icons">photo_camera</span> Photography & Reporting</h4>
+                            <p>Capture inspiring human stories, photograph sustainable projects, and share transparent field progress.</p>
+                            <span class="role-select-badge"><span class="material-icons" style="font-size:14px;">touch_app</span> Select This Role</span>
+                        </div>
+
+                        <div class="info-card volunteer-role-card" data-category="aid" data-role="aid" title="Click to pre-select this role in form">
+                            <h4><span class="material-icons">volunteer_activism</span> Logistics & Food Aid</h4>
+                            <p>Coordinate emergency seed packet distributions, agricultural kits, and commune deliveries across rural provinces.</p>
+                            <span class="role-select-badge"><span class="material-icons" style="font-size:14px;">touch_app</span> Select This Role</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Success Modal -->
+        <div class="checkout-modal" id="volSuccessModal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="checkout-box">
+                <button class="modal-close" id="volSuccessClose" aria-label="Close modal">&times;</button>
+                <span class="material-icons success-icon">check_circle</span>
+                <h3 data-i18n="vol_success_title">Application Received!</h3>
+                <p style="color: var(--c-muted); font-size: 14px; margin-bottom: 20px;" data-i18n="vol_success_desc">Thank you for stepping up to help. Our volunteer coordinator in Phnom Penh will reach out via Telegram or Email within 48 hours.</p>
+                <a href="index.html" class="submit-btn" style="display: block; text-decoration: none; margin-bottom: 10px;" data-i18n="thank_close_btn">Return to Home</a>
+                <button type="button" class="btn btn-outline" id="volDismissBtn" style="width: 100%; border: 1px solid var(--c-border); background: transparent; padding: 10px; border-radius: 4px; font-weight: 600; cursor: pointer; color: var(--c-dark);" data-i18n="close_modal_btn">Close</button>
+            </div>
+        </div>
+
+        <!-- Live Certificate Preview Modal -->
+        <div class="checkout-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="checkout-box cert-modal-box">
+                <button class="modal-close" id="certClose" aria-label="Close certificate">&times;</button>
+                <div class="certificate-frame" id="printableCert">
+                    <div class="cert-org-logo">
+                        <span class="material-icons" style="color: var(--c-primary);">eco</span> HopeCambo
+                    </div>
+                    <div class="cert-subtitle">Kingdom of Cambodia • Community Service Award</div>
+                    
+                    <h2 class="cert-main-title" data-i18n="cert_modal_title">Certificate of Volunteer Service</h2>
+                    <p style="font-size: 13px; color: var(--c-muted); margin-bottom: 6px;" data-i18n="cert_awarded_to">This certificate is proudly awarded to</p>
+                    
+                    <div class="cert-recipient-name" id="certRecipientName">Chan Vathanaka</div>
+                    
+                    <div>
+                        <span class="cert-role-badge" id="certRoleBadge">Water Station Maintenance & Field Work</span>
+                    </div>
+
+                    <p class="cert-body-text" data-i18n="cert_body">For outstanding dedication and volunteer service empowering rural communities in Cambodia.</p>
+                    
+                    <div style="font-weight: 700; font-size: 13px; color: var(--c-primary); margin-bottom: 16px;">
+                        <span class="material-icons" style="font-size: 16px; vertical-align: middle;">verified</span>
+                        <span data-i18n="cert_hours">50+ Verified Field Hours</span>
+                    </div>
+
+                    <div class="cert-signatures">
+                        <div class="cert-sign-col">
+                            <div class="cert-sign-line">Sophea Chan</div>
+                            <div class="cert-sign-title" data-i18n="cert_director">Country Director</div>
+                        </div>
+                        <div class="cert-sign-col">
+                            <div class="cert-sign-line">Dara Vicheka</div>
+                            <div class="cert-sign-title" data-i18n="cert_field_lead">Field Operations Lead</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-outline" id="printCertBtn" style="margin-top: 18px; width: 100%; border: 1px solid var(--c-primary); color: var(--c-primary); padding: 11px; border-radius: 4px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; background: transparent;">
+                    <span class="material-icons" style="font-size: 18px;">print</span>
+                    <span data-i18n="cert_print_btn">Print / Save Certificate (PDF)</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Volunteer Testimonials Section -->
+        <section class="volunteer-testimonials reveal">
+            <div class="container">
+                <h2 class="title" data-i18n="vol_testi_title">Voices From Our Volunteers</h2>
+                <p class="subtitle" data-i18n="vol_testi_sub">Real stories from local students, educators, and international supporters working in Cambodian communities.</p>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testi-rating">★★★★★</div>
+                        <p class="testimonial-quote" data-i18n="testi1_text">Teaching village students how to navigate educational tablets was the most rewarding experience of my university life. Seeing children's faces light up when reading their first digital sentence is something I will never forget.</p>
+                        <div class="testimonial-author">
+                            <div class="testi-avatar">SM</div>
+                            <div class="testi-meta">
+                                <strong data-i18n="testi1_name">Sreyneath Meas</strong>
+                                <span data-i18n="testi1_role">Digital Literacy Volunteer • Phnom Penh & Battambang</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testi-rating">★★★★★</div>
+                        <p class="testimonial-quote" data-i18n="testi2_text">Working alongside Siem Reap commune leaders to install solar filtration wells taught me the power of community-led development. The transparency and local respect at HopeCambo is extraordinary.</p>
+                        <div class="testimonial-author">
+                            <div class="testi-avatar">TB</div>
+                            <div class="testi-meta">
+                                <strong data-i18n="testi2_name">Thomas Bennett</strong>
+                                <span data-i18n="testi2_role">Clean Water Engineering Intern • Melbourne, Australia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testi-rating">★★★★★</div>
+                        <p class="testimonial-quote" data-i18n="testi3_text">Documenting clean water flowing into a remote primary school for the very first time was deeply moving. Volunteering here gave me direct hands-on experience and a deep pride in helping rural families.</p>
+                        <div class="testimonial-author">
+                            <div class="testi-avatar">BS</div>
+                            <div class="testi-meta">
+                                <strong data-i18n="testi3_name">Bopha Seng</strong>
+                                <span data-i18n="testi3_role">Field Media & Storytelling Volunteer • Siem Reap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section with Newsletter -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3><span class="material-icons footer-logo-icon">eco</span> HopeCambo</h3>
+                <p data-i18n="footer_desc">Building resilient communities in Cambodia through transparent and impactful development programs.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_contact_title">Contact Info</h4>
+                <p data-i18n="footer_email">Email: contact@hopecambo.org</p>
+                <p data-i18n="footer_phone">Phone: +855 (0) 23 987 654</p>
+                <p data-i18n="footer_address">Phnom Penh & Siem Reap, Cambodia</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_news_title">Newsletter</h4>
+                <p data-i18n="footer_news_sub">Get monthly field reports and transparent impact stories.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email" data-i18n-ph="footer_news_ph" required>
+                        <button type="submit" class="newsletter-btn" data-i18n="footer_news_btn">Subscribe</button>
+                    </div>
+                    <div class="newsletter-feedback" id="newsletterFeedback"></div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 HopeCambo Non-Profit Organization. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Translations & Script -->
+    <script src="translations.js"></script>
+    <script>
+        // Interactive Role Category Filtering
+        const roleFilterChips = document.querySelectorAll('.role-chip');
+        const roleCards = document.querySelectorAll('.volunteer-role-card');
+
+        roleFilterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                roleFilterChips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                const filter = chip.getAttribute('data-filter');
+
+                roleCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.classList.remove('is-filtered-out');
+                    } else {
+                        card.classList.add('is-filtered-out');
+                    }
+                });
+            });
+        });
+
+        // Interactive Role Selection Sync with Form
+        const volRoleSelect = document.getElementById('volRole');
+        const certRoleBadge = document.getElementById('certRoleBadge');
+
+        function updateRoleLabel() {
+            if (volRoleSelect && certRoleBadge) {
+                const optText = volRoleSelect.options[volRoleSelect.selectedIndex]?.text;
+                if (optText) certRoleBadge.textContent = optText;
+            }
+        }
+
+        roleCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const targetRole = card.getAttribute('data-role');
+                if (volRoleSelect && targetRole) {
+                    volRoleSelect.value = targetRole;
+                    updateRoleLabel();
+                    volRoleSelect.classList.remove('flash-highlight');
+                    void volRoleSelect.offsetWidth; // trigger reflow
+                    volRoleSelect.classList.add('flash-highlight');
+                    volRoleSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    volRoleSelect.focus();
+                }
+            });
+        });
+
+        if (volRoleSelect) {
+            volRoleSelect.addEventListener('change', updateRoleLabel);
+        }
+
+        // Shift Days & Time Chips
+        function setupChipGroup(groupId) {
+            const container = document.getElementById(groupId);
+            if (!container) return;
+            const chips = container.querySelectorAll('.shift-chip');
+            chips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    chips.forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                });
+            });
+        }
+        setupChipGroup('shiftDaysGroup');
+        setupChipGroup('shiftTimeGroup');
+
+        // Phone / Telegram Format Helper
+        const volPhoneInput = document.getElementById('volPhone');
+        if (volPhoneInput) {
+            volPhoneInput.addEventListener('focus', () => {
+                if (!volPhoneInput.value) {
+                    volPhoneInput.value = '+855 ';
+                }
+            });
+        }
+
+        // Set Minimum Start Date to Today
+        const volStartDate = document.getElementById('volStartDate');
+        if (volStartDate) {
+            const today = new Date().toISOString().split('T')[0];
+            volStartDate.min = today;
+            volStartDate.value = today;
+        }
+
+        // Live Certificate Synchronization
+        const volNameInput = document.getElementById('volName');
+        const certRecipientName = document.getElementById('certRecipientName');
+        const certModal = document.getElementById('certModal');
+        const openCertBtn = document.getElementById('openCertBtn');
+        const certClose = document.getElementById('certClose');
+        const printCertBtn = document.getElementById('printCertBtn');
+
+        function updateCertName() {
+            if (certRecipientName) {
+                const enteredName = volNameInput?.value.trim();
+                certRecipientName.textContent = enteredName || 'Chan Vathanaka';
+            }
+        }
+
+        if (volNameInput) {
+            volNameInput.addEventListener('input', updateCertName);
+        }
+
+        function openCertModal() {
+            updateCertName();
+            updateRoleLabel();
+            if (certModal) {
+                certModal.classList.add('active');
+                certModal.setAttribute('aria-hidden', 'false');
+            }
+        }
+
+        function closeCertModal() {
+            if (certModal) {
+                certModal.classList.remove('active');
+                certModal.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        if (openCertBtn) openCertBtn.addEventListener('click', openCertModal);
+        if (certClose) certClose.addEventListener('click', closeCertModal);
+
+        if (certModal) {
+            certModal.addEventListener('click', (e) => {
+                if (e.target === certModal) closeCertModal();
+            });
+        }
+
+        if (printCertBtn) {
+            printCertBtn.addEventListener('click', () => {
+                window.print();
+            });
+        }
+
+        // Volunteer Form Submission & Modal Controls
+        const volunteerForm = document.getElementById('volunteerForm');
+        const volSuccessModal = document.getElementById('volSuccessModal');
+        const volSuccessClose = document.getElementById('volSuccessClose');
+        const volDismissBtn = document.getElementById('volDismissBtn');
+
+        function closeVolModal() {
+            if (volSuccessModal) {
+                volSuccessModal.classList.remove('active');
+                volSuccessModal.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        if (volunteerForm && volSuccessModal) {
+            volunteerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                volSuccessModal.classList.add('active');
+                volSuccessModal.setAttribute('aria-hidden', 'false');
+                volunteerForm.reset();
+            });
+        }
+
+        if (volSuccessClose) volSuccessClose.addEventListener('click', closeVolModal);
+        if (volDismissBtn) volDismissBtn.addEventListener('click', closeVolModal);
+
+        if (volSuccessModal) {
+            volSuccessModal.addEventListener('click', (e) => {
+                if (e.target === volSuccessModal) closeVolModal();
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVolModal();
+                closeCertModal();
+            }
+        });
+    </script>
+</body>
+</html>

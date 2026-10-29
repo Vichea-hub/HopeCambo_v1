@@ -1,0 +1,556 @@
+/* ==========================================================
+   Volunteer Page Specific Styles
+   ========================================================== */
+
+/* ---------- Volunteer Section ---------- */
+.volunteer-section {
+  padding: 70px 0;
+  background-color: var(--c-surface-alt);
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.volunteer-form-box {
+  background-color: var(--c-white);
+  padding: 38px 32px;
+  border: 1px solid var(--c-border);
+  border-top: 4px solid var(--c-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(24, 34, 45, 0.05);
+}
+
+.volunteer-form-box h3 {
+  font-size: 1.35rem;
+  margin-bottom: 22px;
+  color: var(--c-dark);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--c-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--c-dark);
+  background-color: var(--c-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(0, 135, 99, 0.12);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--c-primary);
+  color: var(--c-white);
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--c-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Volunteer Info Sidebar */
+.volunteer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 22px;
+  transition: all 0.25s ease;
+}
+
+.volunteer-role-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.volunteer-role-card:hover {
+  border-color: var(--c-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(24, 34, 45, 0.08);
+}
+
+.role-select-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--c-primary);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flash-highlight {
+  animation: flashHighlight 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes flashHighlight {
+  0% { box-shadow: 0 0 0 4px rgba(0, 135, 99, 0.45); border-color: var(--c-primary); }
+  100% { box-shadow: none; }
+}
+
+.info-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--c-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-card h4 .material-icons {
+  color: var(--c-primary);
+  font-size: 22px;
+}
+
+.info-card p {
+  color: var(--c-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.volunteer-photo {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+}
+
+.volunteer-photo img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Confirmation Modal */
+.checkout-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 34, 45, 0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.checkout-modal.active {
+  display: flex;
+}
+
+.checkout-box {
+  background: var(--c-white);
+  max-width: 440px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 35px 24px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+  font-size: 56px;
+  color: var(--c-primary);
+  margin-bottom: 12px;
+}
+
+/* ---------- Role Filter Bar ---------- */
+.volunteer-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background-color: var(--c-white);
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--c-border);
+  margin-bottom: 24px;
+}
+
+.filter-label {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--c-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role-filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.role-chip {
+  background: var(--c-surface-alt);
+  border: 1px solid var(--c-border);
+  color: var(--c-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-chip:hover,
+.role-chip.active {
+  background-color: var(--c-primary);
+  border-color: var(--c-primary);
+  color: var(--c-white);
+}
+
+.volunteer-role-card.is-filtered-out {
+  display: none !important;
+}
+
+/* ---------- Interactive Shift Picker ---------- */
+.shift-chips-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.shift-chip {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  color: var(--c-dark);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.shift-chip:hover,
+.shift-chip.active {
+  border-color: var(--c-primary);
+  background-color: var(--c-surface-alt);
+  color: var(--c-primary);
+}
+
+.shift-chip.active {
+  border-width: 2px;
+}
+
+/* ---------- Certificate Promo & Live Modal ---------- */
+.cert-promo-card {
+  background: var(--c-white);
+  border: 2px dashed var(--c-primary);
+}
+
+.cert-promo-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cert-badge-icon {
+  font-size: 36px;
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+
+.cert-preview-btn {
+  width: 100%;
+  border: 1px solid var(--c-primary);
+  color: var(--c-primary);
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.cert-preview-btn:hover {
+  background-color: var(--c-primary);
+  color: var(--c-white);
+}
+
+/* Certificate Layout in Modal */
+.cert-modal-box {
+  max-width: 680px;
+  padding: 30px 24px;
+}
+
+.certificate-frame {
+  background: #ffffff;
+  border: 3px double var(--c-primary);
+  padding: 24px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.cert-org-logo {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--c-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cert-subtitle {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-bottom: 16px;
+}
+
+.cert-main-title {
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cert-recipient-name {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--c-dark);
+  border-bottom: 2px solid var(--c-primary);
+  display: inline-block;
+  padding: 0 24px 4px 24px;
+  margin: 12px 0 14px 0;
+  min-width: 250px;
+}
+
+.cert-role-badge {
+  display: inline-block;
+  background-color: var(--c-surface-alt);
+  border: 1px solid var(--c-border);
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.cert-body-text {
+  font-size: 13px;
+  color: var(--c-muted);
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+  line-height: 1.5;
+}
+
+.cert-signatures {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+}
+
+.cert-sign-col {
+  text-align: center;
+}
+
+.cert-sign-line {
+  font-family: "Brush Script MT", cursive, Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--c-dark);
+  margin-bottom: 2px;
+}
+
+.cert-sign-title {
+  font-size: 11px;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ---------- Volunteer Testimonials Section ---------- */
+.volunteer-testimonials {
+  padding: 75px 0;
+  background-color: var(--c-white);
+  border-top: 1px solid var(--c-border);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.testimonial-card {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--c-primary);
+  box-shadow: 0 10px 24px rgba(24, 34, 45, 0.08);
+}
+
+.testimonial-quote {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--c-dark);
+  flex-grow: 1;
+  margin-bottom: 20px;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: '“';
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--c-primary);
+  line-height: 0;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--c-border);
+  padding-top: 16px;
+}
+
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  background-color: var(--c-surface-alt);
+  border: 1px solid var(--c-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.testi-meta strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--c-dark);
+}
+
+.testi-meta span {
+  display: block;
+  font-size: 12px;
+  color: var(--c-muted);
+}
+
+.testi-rating {
+  color: #eab308;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .volunteer-form-box {
+    padding: 26px 18px;
+  }
+  .cert-recipient-name {
+    font-size: 1.5rem;
+    min-width: auto;
+  }
+  .cert-signatures {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+@media print {
+  #printCertBtn {
+    display: none !important;
+  }
+  .cert-modal-box {
+    max-width: 100% !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  .certificate-frame {
+    box-shadow: none !important;
+    padding: 40px !important;
+  }
+}
